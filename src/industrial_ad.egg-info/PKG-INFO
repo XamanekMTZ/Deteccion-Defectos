@@ -1,0 +1,48 @@
+Metadata-Version: 2.4
+Name: industrial-ad
+Version: 0.1.0
+Summary: Inspección de defectos con Vision Transformers (ViT/Swin) - pipeline base
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: torch>=2.2
+Requires-Dist: torchvision>=0.17
+Requires-Dist: timm>=1.0.9
+Requires-Dist: opencv-python>=4.9.0
+Requires-Dist: numpy>=1.26
+Requires-Dist: pandas>=2.2
+Requires-Dist: scikit-learn>=1.4
+Requires-Dist: matplotlib>=3.8
+Requires-Dist: tqdm>=4.66
+Requires-Dist: pyyaml>=6.0.1
+
+# Inspección de defectos con ViT/Swin
+
+## Requisitos
+- Python 3.9+
+- CUDA opcional (para entrenamiento/inferencia acelerada)
+
+## Instalar dependencias
+```bash
+python -m venv .venv
+source .venv/bin/activate # En Windows usar `.venv\Scripts\activate`
+pip install -U pip
+pip install -e .
+```
+
+## Datos (MVTec AD)
+Coloca el dataset descomprimido así:
+```
+data/mvtec_ad/
+carpet/
+train/good/.png
+test/good/.png
+test/stain/.png
+ground_truth/stain/.png # máscaras
+grid/
+leather/
+...
+```
+## Verificar dataset
+```bash
+python scripts/verify_mvtec.py --data-path data/mvtec_ad
+```

@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+src/industrial_ad/__init__.py
+src/industrial_ad/config.py
+src/industrial_ad.egg-info/PKG-INFO
+src/industrial_ad.egg-info/SOURCES.txt
+src/industrial_ad.egg-info/dependency_links.txt
+src/industrial_ad.egg-info/requires.txt
+src/industrial_ad.egg-info/top_level.txt
+src/industrial_ad/anomaly/patchcore_simple.py
+src/industrial_ad/datasets/__init__.py
+src/industrial_ad/datasets/mvtec.py
+src/industrial_ad/datasets/mvtec_ad2.py
+src/industrial_ad/models/backbones.py
